@@ -1,0 +1,151 @@
+.project__container {
+  width: 70%;
+  margin: 100px auto;
+  /* border: 1px solid #5c5c5c; */
+  color: #fff;
+  padding: 120px 40px;
+  text-align: center;
+}
+
+.project__container-title h1 {
+  color: #fff;
+  font-family: "Krona One", sans-serif;
+  font-size: 140px;
+}
+
+.project__container-subtitle {
+  margin: 20px 0;
+  font-family: "Jura", sans-serif;
+  font-size: 16px;
+}
+
+.project__container-images {
+  position: relative;
+  width: 100%;
+  height: 2000px;
+  padding: 40px 0;
+}
+.project__item {
+  width: 600px;
+  height: 400px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  .project__image {
+    max-width: 75%;
+    object-fit: cover;
+  }
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 63px;
+    right: 0;
+    height: 2.5em;
+    width: 2.5em;
+    border-radius: 50%;
+    opacity: 0.5;
+    transition: 0.5s all ease;
+  }
+  &::before {
+    content: "\f04b";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    font-size: 1em;
+    background: #f00;
+    color: #fff;
+    display: grid;
+    place-items: center;
+    z-index: 10;
+  }
+  &:hover::before {
+    opacity: 1;
+  }
+  &:hover::after {
+    background: lightblue;
+    z-index: 1;
+    animation: pulse 1250ms infinite;
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+}
+
+.project__image-two {
+  position: relative;
+  top: -100px;
+  left: -260px;
+}
+
+.project__image-three {
+  position: relative;
+  left: 300px;
+  top: -200px;
+}
+
+.project__image-four {
+  position: relative;
+  top: -200px;
+  left: -100px;
+}
+
+.project-next-link {
+  position: relative;
+  top: -100px;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-next-link a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Jura", sans-serif;
+  font-size: 160px;
+}
+
+.anime-js-title .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+@media (max-width: 900px) {
+  .project__container-title h1 {
+    font-size: 40px;
+  }
+
+  .project__container {
+    width: 80%;
+  }
+
+  .project__container-images {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .project__image {
+    transform: translateX(-80%);
+    width: 60%;
+  }
+
+  .project__image-one,
+  .project__image-two,
+  .project__image-three,
+  .project__image-four {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+}
