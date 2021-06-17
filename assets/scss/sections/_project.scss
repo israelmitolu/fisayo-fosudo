@@ -40,7 +40,7 @@
   &::after {
     content: "";
     position: absolute;
-    bottom: 63px;
+    bottom: 16%;
     right: 0;
     height: 2.5em;
     width: 2.5em;
@@ -57,7 +57,7 @@
     color: #fff;
     display: grid;
     place-items: center;
-    z-index: 10;
+    z-index: 5;
   }
   &:hover::before {
     opacity: 1;

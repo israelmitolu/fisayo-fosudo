@@ -1,4 +1,95 @@
 .home {
-  overflow-y: hidden !important;
+  overflow: hidden;
   position: fixed;
+}
+/* horizontal scroll items  */
+
+.container {
+  margin-top: 200px;
+  margin-left: 200px;
+}
+
+.container__item {
+  position: relative;
+  width: 540px;
+  height: 360px;
+  margin: 50px 500px 20px 80px;
+}
+
+.container__item-header h1 {
+  position: relative;
+  top: 40px;
+  left: 0;
+  right: 0;
+  width: 600px;
+  height: 360px;
+  font-size: 100px !important;
+  font-weight: bolder;
+  font-family: "Krona One", sans-serif;
+}
+
+.container__item h1 {
+  position: absolute;
+  color: #fff;
+  font-weight: lighter;
+  font-size: 64px;
+}
+
+.container__item-title a {
+  color: #fff;
+  font-family: "Jura", sans-serif;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.container__item-1 {
+  background: url(/assets/images/img-one.jpg) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.container__item-2 {
+  background: url(/assets/images/img-two.jpg) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.container__item-3 {
+  background: url(/assets/images/img-three.jpg) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.container__item-4 {
+  background: url(/assets/images/img-four.jpg) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.container__item-5 {
+  background: url(/assets/images/img-five.jpg) no-repeat 50% 50%;
+  background-size: cover;
+}
+.container__item-1 h1,
+.container__item-3 h1,
+.container__item-5 h1 {
+  bottom: 0;
+  right: -60px;
+}
+.container__item-2 h1,
+.container__item-4 h1 {
+  right: -60px;
+}
+@media (max-width: 900px) {
+  .container__item {
+    width: 300px;
+    height: 200px;
+    margin: 50px 100px 20px 80px;
+  }
+
+  .container__item-header h1 {
+    font-size: 30px !important;
+    left: -50%;
+  }
+
+  .container__item h1 {
+    font-size: 40px;
+    bottom: -20px;
+  }
 }

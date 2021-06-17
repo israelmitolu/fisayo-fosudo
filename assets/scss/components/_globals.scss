@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 body {
-  background: $dark;
+  background: black;
 }
 /* menu */
 nav {
@@ -21,13 +21,19 @@ nav {
 .menu__logo,
 .menu__items-link {
   padding: 40px;
+  a {
+    font-family: "Jura", sans-serif;
+  }
 }
 
 .menu__logo a {
   color: #fff;
-  font-size: 14px;
-  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: bolder;
   text-decoration: none;
+  text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+    -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+    0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
 }
 
 .menu__items {
@@ -36,100 +42,11 @@ nav {
 
 .menu__items-link a {
   color: #fff;
-  font-size: 14px;
+  font-size: 1em;
   font-weight: 400;
   text-decoration: none;
 }
 
 .menu__items-link.active a {
   text-decoration: underline;
-}
-
-/* horizontal scroll items  */
-
-.container {
-  margin-top: 200px;
-  margin-left: 200px;
-}
-
-.container__item {
-  position: relative;
-  width: 540px;
-  height: 360px;
-  margin: 50px 500px 20px 80px;
-}
-
-.container__item-header h1 {
-  position: relative;
-  top: 40px;
-  left: 0;
-  right: 0;
-  width: 600px;
-  height: 360px;
-  font-size: 100px !important;
-}
-
-.container__item h1 {
-  position: absolute;
-  color: #fff;
-  font-family: "Jura", sans-serif;
-  font-weight: lighter;
-  font-size: 64px;
-}
-
-.container__item-title a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.container__item-1 {
-  background: url(/assets/images/img-one.jpeg) no-repeat 50% 50%;
-  background-size: cover;
-}
-
-.container__item-2 {
-  background: url(/assets/images/img-two.jpeg) no-repeat 50% 50%;
-  background-size: cover;
-}
-
-.container__item-3 {
-  background: url(/assets/images/img-three.jpeg) no-repeat 50% 50%;
-  background-size: cover;
-}
-
-.container__item-4 {
-  background: url(/assets/images/img-four.jpeg) no-repeat 50% 50%;
-  background-size: cover;
-}
-
-.container__item-5 {
-  background: url(/assets/images/img-five.jpeg) no-repeat 50% 50%;
-  background-size: cover;
-}
-.container__item-1 h1,
-.container__item-3 h1,
-.container__item-5 h1 {
-  bottom: 0;
-  right: -60px;
-}
-.container__item-2 h1,
-.container__item-4 h1 {
-  right: -60px;
-}
-@media (max-width: 900px) {
-  .container__item {
-    width: 300px;
-    height: 200px;
-    margin: 50px 100px 20px 80px;
-  }
-
-  .container__item-header h1 {
-    font-size: 30px !important;
-    left: -50%;
-  }
-
-  .container__item h1 {
-    font-size: 40px;
-    bottom: -20px;
-  }
 }
