@@ -12,72 +12,52 @@
     <link rel="stylesheet" href="/assets/css/styles.min.css" />
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <!-- ===== BOX ICONS ===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 </head> 
 
 <body class="home">
-    <!-- <div class="intro">
-        <h3>Without #FodaAdu</h3> this will load up individually ! Then for page transitions, use #FodaAdu as the text
-    </div> -->
-    <div class="wrapper">
-
-        <!-- menu -->
-        <nav class="menu">
-            <div class="menu__logo">
-                <a href="/index.html">FF</a>
-            </div>
-            <div class="menu__items">
-                <div class="menu__items-link active"><a href="/playlist/">Playlists</a></div>
-                <div class="menu__items-link"><a href="/about/">About</a></div>
-            </div>
-        </nav>
-
-        <!-- horizontal scroll items -->
-        <div class="container">
-            <div class="container__item container__item-header">
-                <h1>Fisayo Fosudo<br>Tech Youtuber</h1>
-            </div>
-
-            <div class="container__item container__item-1">
-                <h1 class="container__item-title">
-                    <a href="/projects/finance/">Finance</a>
-                </h1>
-            </div>
-            <div class="container__item container__item-2">
-                <h1 class="container__item-title">
-                    <a href="/projects/reviews/">Phones&Screens</a>
-                </h1>
-            </div>
-            <div class="container__item container__item-3">
-                <h1 class="container__item-title">
-                    <a href="/projects/gaming/">Gaming</a>
-                </h1>
-            </div>
-            <div class="container__item container__item-4">
-                <h1 class="container__item-title">
-                    <a href="/projects/gadgets/">Gadgets</a>
-                </h1>
-            </div>
-            <div class="container__item container__item-5">
-                <h1 class="container__item-title">
-                    <a href="/projects/finance/">Cars</a>
-                </h1>
-            </div>
+    <div class="intro">
+        <div class="intro-text">
+            <h3 class="hide">
+                <span class="text">Loading...</span>
+            </h3>
         </div>
     </div>
+    <div class="slider_home"></div>
+
+
+    <div class="home home-grid">
+        <div class="home__data">
+            <h1 class="home__title">Hey<br>It's <span class="home__title-color">Fisayo here.</span><br> #FodaAdu</h1>
+
+            <a href="#" class="button">Visit Channel</a>
+        </div>
+
+        <div class="home__social">
+            <a href="" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+            <a href="" class="home__social-icon"><i class='bx bxl-behance' ></i></a>
+            <a href="" class="home__social-icon"><i class='bx bxl-github' ></i></a>
+        </div>
+
+        <div class="home__img">    
+            <img src="assets/images/cursor.jpg" alt="Fisayo Fosudo">
+        </div>
+    </div>
+    
 
     <!-- script -->
-    <script src="https://cdn.jsdelivr.net/npm/horizontal-scroll@1.1.0/dist/index.min.js"></script>    
     <script>
-        ////skewEffect
-        var blocks = document.getElementsByClassName("container__item");
-        var container = document.getElementsByClassName("container");
-        var hs = new HorizontalScroll.default({
-            blocks: blocks,
-            container: container,
-            isAnimated: true,
-            springEffect: 0.8,
-            skewReducer: 35
+        
+        ///// Preloader
+        const tl = gsap.timeline({
+        defaults: { ease: "power1.out" }
         });
+
+        tl.to('.text', { y: "0%", duration: 1.5, stagger: 0.25 });
+        tl.to(".slider_home", { y: "-100%", duration: 1.5, delay: 0.5 });
+        tl.to(".intro", { y: "-100%", duration: 1 }, "-=1");
     </script>
 </body>
 

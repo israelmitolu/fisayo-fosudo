@@ -11,15 +11,23 @@
     <link rel="shortcut icon" href="/assets/images/favicon.ico" />
     <link rel="stylesheet" href="/assets/css/styles.min.css" />
     <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
 </head> 
 
 <body class="home">
-    <!-- <div class="intro">
-        <h3>Without #FodaAdu</h3> this will load up individually ! Then for page transitions, use #FodaAdu as the text
-    </div> -->
+    <div class="intro">
+        <div class="intro-text">
+            <h3 class="hide">
+                <span class="text">Without</span>
+            </h3>
+            <h3 class="hide">
+                <span class="text">#FodaAdu</span>
+            </h3>
+        </div>
+    </div>
+    <div class="slider"></div>
     <div class="wrapper">
-
         <!-- menu -->
         <nav class="menu">
             <div class="menu__logo">
@@ -67,7 +75,8 @@
     </div>
 
     <!-- script -->
-    <script src="https://cdn.jsdelivr.net/npm/horizontal-scroll@1.1.0/dist/index.min.js"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/horizontal-scroll@1.1.0/dist/index.min.js"></script>  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  
     <script>
         ////skewEffect
         var blocks = document.getElementsByClassName("container__item");
@@ -79,6 +88,15 @@
             springEffect: 0.8,
             skewReducer: 35
         });
+
+        ///// Preloader
+        const tl = gsap.timeline({
+        defaults: { ease: "power1.out" }
+        });
+
+        tl.to('.text', { y: "0%", duration: 1.5, stagger: 0.25 });
+        tl.to(".slider", { x: "100%", duration: 1.5, delay: 0.5 });
+        tl.to(".intro", { x: "100%", duration: 1 }, "-=1");
     </script>
 </body>
 

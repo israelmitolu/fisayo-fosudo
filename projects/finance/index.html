@@ -19,6 +19,7 @@
 </head>
 
 <body id="js-scroll">
+    <div class="slider-2"></div>
     <div class="wrapper">
 
         <!-- menu -->
@@ -55,6 +56,8 @@
                 <a href="https://www.youtube.com/watch?v=JN9zZKAxSOw&t=90s" target="_blank"><div class="project__item project__image-four" data-scroll data-scroll-speed="4">
                     <img src="/assets/images/JN9zZKAxSOwsd.jpg" alt="" class="project__image"></div>
                 </a>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/9-E2GJW_8Vc?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
             </div>
 
             <div class="project-next-link" data-scroll>
@@ -101,6 +104,12 @@
             opacity: 0,
             ease: Expo.easeInOut
         });
+
+        TweenMax.from(".slider-2"), 2, {
+            x: "100%", 
+            duration: 1.5, 
+            delay: 0.5
+        }
     </script>
 </body>
 
